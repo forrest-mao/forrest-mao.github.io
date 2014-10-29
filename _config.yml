@@ -5,7 +5,7 @@ rdiscount:
   extensions: [smart]
 
 name: Forrest Mao
-url: http://forrest-mao.github.io
+url: http://blog.forrest-mao.com
 description: Things I wish I someone had told me about software and community 
 weibo: forrestmao
 github_username: forrest-mao
