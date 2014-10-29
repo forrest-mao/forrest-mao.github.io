@@ -47,12 +47,15 @@ mkzip/<mode>
     POST /pfop/ HTTP/1.1
     Host: api.qiniu.com  
     Content-Type: application/x-www-form-urlencoded  
-    Authorization: QBox <AccessToken>  
+    Authorization: QBox \<AccessToken\>  
 
     bucket=test
     &key=sample.mp4
-    &fops=mkzip%2f1%2furl%2faHR0cDovL3Fpbml1cGhvdG9zLnFpbml1ZG4uY29tL2dvZ29waGVyLmpwZw==%2furl%2faHR0cDovL2RldmVsb3Blci5xaW5pdS5jb20vcmVzb3VyY2UvZGl2ZS1pbnRvLWdvbGFuZy5wcHR4%2falias%2fZ29sYW5nLnBwdHg=%2faHR0cDovL29wZW4ucWluaXVkbi5jb20vdGhpbmtpbmctaW4tZ28ubXA0%2csaveas%2fdGVzdDp0ZXN0LnppcA==
-</code>
+    &fops=mkzip%2f1%2furl%2faHR0cDovL3Fpbml1cGhvdG9zLnFpbml1ZG4uY29tL2dvZ29waGVyLm
+    pwZw==%2furl%2faHR0cDovL2RldmVsb3Blci5xaW5pdS5jb20vcmVzb3VyY2UvZGl2ZS1pbnRvLWd
+    vbGFuZy5wcHR4%2falias%2fZ29sYW5nLnBwdHg=%2faHR0cDovL29wZW4ucWluaXVkbi5jb20vdGh
+    pbmtpbmctaW4tZ28ubXA0%2csaveas%2fdGVzdDp0ZXN0LnppcA==
+    </code>
 </pre>
 
 其中，请求body中的`key=sample.mp4`仅仅为符合[pfop操作][pfopHref]的接口规格而存在，并没有实际的意义。
