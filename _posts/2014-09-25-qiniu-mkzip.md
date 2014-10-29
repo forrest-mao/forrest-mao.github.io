@@ -14,19 +14,21 @@ title: 七牛多文件压缩（mkzip）
 <a id="specification"></a>
 ## 接口规格（mkzipSpec）
 
-```
-mkzip/<mode>
+<code>
+    <pre>
+mkzip/\<mode\>
      /url/<Base64EncodedURL>
      /alias/<Base64EncodedAlias>
      /url/<Base64EncodedURL>
-     ...  
-```
+     ... 
+     </pre>
+</code> 
 
 参数名称      | 说明                              | 必填
 :------------ | :-------------------------------- | :-------
 `<Mode>`      | 当前固定值为`1`，该字段主要用作后续功能扩展 | 必填
-`<Base64EncodedURL>` | 需要被压缩的资源的URL，必须是公网可访资源，在请求中需要经过[URL安全的Base64编码](/docs/v6/api/overview/appendix.html#urlsafe-base64) |  至少一项
-`<Base64EncodedAlias>` | 资源在压缩文件中的别名，需要经过[URL安全的Base64编码](/docs/v6/api/overview/appendix.html#urlsafe-base64)，若不指定则为url中资源的原文件名 |
+`<Base64EncodedURL>` | 需要被压缩的资源的URL，必须是公网可访资源，在请求中需要经过[URL安全的Base64编码](http://developer.qiniu.com/docs/v6/api/overview/appendix.html#urlsafe-base64) |  至少一项
+`<Base64EncodedAlias>` | 资源在压缩文件中的别名，需要经过[URL安全的Base64编码](http://developer.qiniu.com/docs/v6/api/overview/appendix.html#urlsafe-base64)，若不指定则为url中资源的原文件名 |
 
 
 **注意**：
@@ -41,11 +43,13 @@ mkzip/<mode>
 
 以[触发持久化处理](pfopHref)的形式：
 
-1. 获取`http://qiniuphotos.qiniudn.com/gogopher.jpg`、`http://developer.qiniu.com/resource/dive-into-golang.pptx`和`http://open.qiniudn.com/thinking-in-go.mp4`中的资源；
+1. 获取`http://qiniuphotos.qiniudn.com/gogopher.jpg`、`http://open.qiniudn.com/thinking-in-go.mp4`、`http://developer.qiniu.com/resource/dive-into-golang.pptx`中的资源；
 2. 将`http://developer.qiniu.com/resource/dive-into-golang.pptx`重命名为`golang.pptx`；
 3. 将`gogopher.jpg`、`golang.pptx`和`thinking-in-go.mp4`打包，并另存为成`test.zip`保存到空间`test`中。
 
-```
+
+<code>
+    <pre>
     POST /pfop/ HTTP/1.1
     Host: api.qiniu.com  
     Content-Type: application/x-www-form-urlencoded  
@@ -54,8 +58,9 @@ mkzip/<mode>
     bucket=test
     &key=sample.mp4
     &fops=mkzip%2f1%2furl%2faHR0cDovL3Fpbml1cGhvdG9zLnFpbml1ZG4uY29tL2dvZ29waGVyLmpwZw==%2furl%2faHR0cDovL2RldmVsb3Blci5xaW5pdS5jb20vcmVzb3VyY2UvZGl2ZS1pbnRvLWdvbGFuZy5wcHR4%2falias%2fZ29sYW5nLnBwdHg=%2faHR0cDovL29wZW4ucWluaXVkbi5jb20vdGhpbmtpbmctaW4tZ28ubXA0%2csaveas%2fdGVzdDp0ZXN0LnppcA==
-    
-```
+
+    </pre>
+</code> 
 
 其中，请求body中的`key=sample.mp4`仅仅为符合[pfop操作][pfopHref]的接口规格而存在，并没有实际的意义。
 
