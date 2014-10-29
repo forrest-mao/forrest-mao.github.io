@@ -63,9 +63,9 @@ a {
 
 .sidebar2 {
   position: fixed;
-  left: 900px;
+  left: 850px;
   top: 15px;
-  width: 400px;
+  width: 350px;
   font-family: Helvetica, sans-serif; }
   .sidebar2 a {
     text-decoration: none; }
