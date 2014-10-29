@@ -12,11 +12,11 @@ title: 七牛多文件压缩（mkzip）
 ## 接口规格（mkzipSpec）
 
 ```
-mkzip/<mode>
-     /url/<Base64EncodedURL>
-     /alias/<Base64EncodedAlias>
-     /url/<Base64EncodedURL>
-     ... 
+    mkzip/<mode>
+         /url/<Base64EncodedURL>
+         /alias/<Base64EncodedAlias>
+         /url/<Base64EncodedURL>
+         ... 
 ``` 
 
 参数名称      | 说明                              | 必填
@@ -47,7 +47,7 @@ mkzip/<mode>
     POST /pfop/ HTTP/1.1
     Host: api.qiniu.com  
     Content-Type: application/x-www-form-urlencoded  
-    Authorization: QBox \<AccessToken\>  
+    Authorization: QBox [AccessToken]
 
     bucket=test
     &key=sample.mp4
