@@ -62,7 +62,7 @@ a {
       margin-bottom: 7px; }
 
 .sidebar2 {
-  position: fixed;
+  /*position: fixed;*/
   left: 880px;
   top: 15px;
   width: 350px;
