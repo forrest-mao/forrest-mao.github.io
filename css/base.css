@@ -62,15 +62,13 @@ a {
       margin-bottom: 7px; }
 
 .sidebar2 {
-  /*position: fixed;*/
-  margin-left: 880px;
-  margin-right: 20px;
-  margin-bottom: 50px;
+  position: fixed;
+  left: 880px;
   top: 15px;
   width: 350px;
   font-family: Helvetica, sans-serif; }
-  .sidebar2 a {
-    text-decoration: none; }
+  .sidebar2 .meta {
+    margin-left: 0px }
   
 
 .content {
