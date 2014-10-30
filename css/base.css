@@ -60,6 +60,8 @@ a {
     .sidebar .sections li {
       list-style: none;
       margin-bottom: 7px; }
+  .sidebar .clock {
+    margin: 15px 0 3px 0;}
 
 .sidebar2 {
   position: fixed;
