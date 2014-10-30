@@ -66,8 +66,8 @@ a {
   margin-left: 880px;
   margin-right: 20px;
   margin-bottom: 50px;
-  /*top: 15px;*/
-  max-width: 350px;
+  top: 15px;
+  width: 350px;
   font-family: Helvetica, sans-serif; }
   .sidebar2 a {
     text-decoration: none; }
