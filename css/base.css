@@ -65,16 +65,16 @@ a {
 
 .sidebar2 {
   position: fixed;
-  left: 880px;
+  left: 930px;
   top: 15px;
-  width: 350px;
+  width: 300px;
   font-family: Helvetica, sans-serif; }
   .sidebar2 .meta {
     margin-left: 0px }
   
 
 .content {
-  max-width: 650px;
+  max-width: 700px;
   margin-left: 200px;
   margin-right: 20px;
   margin-bottom: 50px; }
